@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <form class="formLibro">
+        <label for="Nombre">Ingrese su nombre completo:</label>
+        <input class="inputdatos" type="text" name="Nombre" id="Nombre">
+
+        <label for="Email">Ingrese su Email:</label>
+        <input pattern=".+@gmail.com" class="inputdatos" type="email" name="Email" id="Email">
+
+        <label for="pass">Ingrese su contraseña:</label>
+        <input  class="inputdatos" type="password" name="pass" id="pass">
+
+        <label for="pass">confirme su contraseña:</label>
+        <input class="inputdatos" type="password2" name="pass" id="pass">
+
+        <button type="button" oninput="validacionTR()">entregar respuesta</button>
+      
+    </form>
+
+    <div id="resultado"> <h1>  </h1></div>
+
+    <script src="index.js"></script>
+</body
