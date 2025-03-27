@@ -8,24 +8,28 @@
 </head>
 <body>
 
-    <form class="formLibro">
+    <form class="form">
         <label for="Nombre">Ingrese su nombre completo:</label>
         <input class="inputdatos" oninput="validacionNombre()" type="text" name="Nombre" id="Nombre">
+        <div id="errorNombre" class="error"></div>
 
         <label for="Email">Ingrese su Email:</label>
-        <input pattern=".+@gmail.com" class="inputdatos" oninput="validacionEmail()" type="email" name="Email" id="Email" >
+        <input pattern=".+@.+.com" class="inputdatos" oninput="validacionEmail()" type="email" name="Email" id="Email">
+        <div id="errorEmail" class="error"></div>
 
         <label for="pass">Ingrese su contraseña:</label>
-        <input  class="inputdatos" type="password" name="pass" id="pass">
+        <input class="inputdatos" oninput="validacionContraseña()" type="password" name="pass" id="pass">
+        <div id="errorContraseña" class="error"></div>
 
-        <label for="pass2">confirme su contraseña:</label>
-        <input class="inputdatos" oninput="validacionContraseña()" type="password2" name="pass2" id="pass2">
+        <label for="pass2">Confirme su contraseña:</label>
+        <input class="inputdatos" oninput="validacionContraseñas()" type="password" name="pass2" id="pass2">
+        <div id="errorPass2" class="error"></div>
 
-        <button type="button"onclick="validacionForm()">entregar respuesta</button>
-      
+        <button type="button" id="enviarBtn" disabled onclick="validacionForm()">Enviar</button>
     </form>
 
     <div id="resultado"> <h1>  </h1></div>
 
-    <script src="index.js"></script>
-</body
+    <script src="script.js"></script>
+</body>
+</html>

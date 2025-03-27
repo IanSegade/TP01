@@ -1,4 +1,4 @@
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -21,8 +21,8 @@ h1 {
     font-size: 2rem;
 }
 
-/* Form Container */
-.formLibro {
+
+form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -34,7 +34,7 @@ h1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Labels and Inputs */
+
 label {
     font-weight: bold;
     color: #333;
@@ -91,26 +91,32 @@ input[type="password2"]:valid {
 
 button {
     padding: 1rem;
-    font-size: 1.1rem;
-    background-color: #e195f0;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-button:hover {
-    background-color: #e195f0;
-    transform: scale(1.05);
-}
-
+       font-size: 1.1rem;
+       background-color: #e195f0;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       transition: background-color 0.3s, transform 0.3s;
+   }
+   
+   
+   button:disabled {
+       background-color: #c4c4c4; 
+       cursor: not-allowed; 
+       border-radius: 5px;
+       font-size: 1.1rem;;
+   }
+   
+   
+  
+   
 button:active {
     transform: scale(1);
 }
 
 @media (max-width: 600px) {
-    .formLibro {
+    .form {
         padding: 1rem;
     }
 
@@ -120,7 +126,14 @@ button:active {
 }
 
 @media (min-width: 601px) {
-    .formLibro {
+    .form {
         width: 400px;
     }
 }
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
